@@ -65,10 +65,8 @@
   main { padding: clamp(4rem, 12vh, 9rem) 0 clamp(4rem, 10vh, 7rem); }
 
   .lead {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    margin: 0;
+    margin: 0 0 0 auto;
+    text-align: right;
     max-width: 18ch;
     font-size: clamp(1rem, 2vw, 4.75rem);
     font-weight: 600;
@@ -169,6 +167,7 @@
     .figure-caption { max-width: 22rem; padding-bottom: 0; }
     .footer-inner { grid-template-columns: 1fr; }
     .footer-inner small { justify-self: start; }
+    .lead { margin-left: 0; text-align: left; }
   }
 </style>
 </head>
