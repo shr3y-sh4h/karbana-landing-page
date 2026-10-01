@@ -9,10 +9,23 @@
 <meta property="og:description" content="Synthetic graphite underpins every technology which requires lithium-ion batteries. Karbana is changing where it can be made.">
 <meta name="theme-color" content="#1C2B38">
 <link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/neue-haas-display-thin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/neue-haas-display-medium.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  @font-face {
+    font-family: "Neue Haas Grotesk Display";
+    src: url("assets/fonts/neue-haas-display-thin.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Neue Haas Grotesk Display";
+    src: url("assets/fonts/neue-haas-display-medium.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
   :root {
     --slate: #1C2B38;
     --white: #FFFFFF;
@@ -26,11 +39,14 @@
   body {
     margin: 0;
     min-height: 100vh;
-    font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Neue Haas Grotesk Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
     font-size: 1.0625rem;
     line-height: 1.6;
     color: var(--white);
     background: var(--slate);
+    letter-spacing: 0.012em;
+    word-spacing: 0.06em;
     -webkit-font-smoothing: antialiased;
   }
   body::before {
@@ -52,9 +68,9 @@
     margin: 0;
     max-width: 18ch;
     font-size: clamp(2.25rem, 5.6vw, 4.75rem);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.04;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.012em;
   }
 
   .problem {
@@ -68,9 +84,9 @@
   .figure {
     margin: 0;
     font-size: clamp(5.5rem, 17vw, 14rem);
-    font-weight: 400;
+    font-weight: 300;
     line-height: 0.8;
-    letter-spacing: -0.055em;
+    letter-spacing: -0.035em;
     font-variant-numeric: lining-nums;
   }
   .figure-caption {
@@ -92,9 +108,9 @@
   .answer h2 {
     margin: 0;
     font-size: clamp(1.75rem, 3.2vw, 2.75rem);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.1;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.008em;
   }
   .answer p {
     margin: 0;
@@ -111,7 +127,7 @@
     gap: 1.5rem clamp(2rem, 5vw, 4rem);
     margin-top: clamp(4rem, 10vh, 7rem);
   }
-  .support-label { margin: 0; font-size: 0.9375rem; color: var(--muted); }
+  .support-label { margin: 0; font-size: 1rem; letter-spacing: 0.02em; color: var(--muted); }
   .support ul {
     display: flex; flex-wrap: wrap; align-items: center;
     gap: 1.5rem clamp(2rem, 5vw, 3.5rem);
@@ -133,8 +149,8 @@
     border-top: 1px solid var(--rule);
   }
   .mark { height: 2.25rem; width: auto; }
-  .footer-inner p { margin: 0; font-size: 0.9375rem; line-height: 1.55; color: var(--mist); }
-  .footer-inner small { justify-self: end; font-size: 0.875rem; color: var(--muted); white-space: nowrap; }
+  .footer-inner p { margin: 0; font-size: 1rem; line-height: 1.6; letter-spacing: 0.02em; color: var(--mist); }
+  .footer-inner small { justify-self: end; font-size: 0.9375rem; letter-spacing: 0.02em; color: var(--muted); white-space: nowrap; }
 
   a:focus-visible { outline: 2px solid var(--white); outline-offset: 6px; }
 
@@ -155,19 +171,19 @@
 </head>
 <body>
   <header class="wrap">
-    <a href="/" aria-label="Karbana home"><img class="logo" src="assets/karbana-logo.png" alt="Karbana" width="1200" height="307"></a>
+    <a href="./" aria-label="Karbana home"><img class="logo" src="assets/karbana-logo.png" alt="Karbana" width="1200" height="307"></a>
   </header>
 
   <main class="wrap">
-    <h1 class="lead reveal">Synthetic graphite underpins every climate technology which relies on lithium-ion batteries.</h1>
+    <h1 class="lead reveal">Synthetic graphite underpins every technology which requires lithium-ion batteries.</h1>
 
     <section class="problem reveal" aria-label="Supply concentration">
       <p class="figure">95%+</p>
       <p class="figure-caption">of the world’s supply comes from one country.</p>
-      <h2>Karbana is changing that.</h2>
     </section>
 
     <section class="answer reveal">
+      <h2>Karbana is changing that.</h2>
       <p>We want to enable new graphitisation capacity to be built in places where it is currently impossible, based on our low-energy, high-throughput synthesis technology.</p>
     </section>
 
